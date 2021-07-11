@@ -4,6 +4,7 @@ set paste
 set mouse=a
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdtree'
