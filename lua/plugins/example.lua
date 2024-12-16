@@ -1,7 +1,3 @@
--- since this is just an example spec, don't actually load anything here and return an empty spec
--- stylua: ignore
-if true then return {} end
-
 -- every spec file under the "plugins" directory will be loaded automatically by lazy.nvim
 --
 -- In your plugin files, you can:
@@ -9,27 +5,6 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
-
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "gruvbox",
-    },
-  },
-
-  -- change trouble config
-  {
-    "folke/trouble.nvim",
-    -- opts will be merged with the parent spec
-    opts = { use_diagnostic_signs = true },
-  },
-
-  -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
-
   -- override nvim-cmp and add cmp-emoji
   {
     "hrsh7th/nvim-cmp",
@@ -63,20 +38,6 @@ return {
     },
   },
 
-  -- add pyright to lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
-      },
-    },
-  },
-
-  -- add tsserver and setup with typescript.nvim instead of lspconfig
   {
     "neovim/nvim-lspconfig",
     dependencies = {
@@ -95,7 +56,9 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        pyright = {},
       },
+
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
       ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
@@ -187,6 +150,23 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "java-debug-adapter",
+        "java-test",
+        "buildifier",
+        "clang-format",
+        "clangd",
+        "codelldb",
+        "css-lsp",
+        "eslint-lsp",
+        "eslint_d",
+        "html-lsp",
+        "java-debug-adapter",
+        "jdtls",
+        "lua-language-server",
+        "ocaml-lsp",
+        "rust-analyzer",
+        "shfmt",
+        "stylua",
       },
     },
   },

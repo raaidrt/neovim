@@ -4,3 +4,7 @@
 
 vim.keymap.set("n", "<leader>db", "<cmd> DapToggleBreakpoint <CR>", { desc = "Add breakpoint at line" })
 vim.keymap.set("n", "<leader>dr", "<cmd> DapContinue <CR>", { desc = "Start or continue the debugger" })
+
+-- Java tests
+vim.keymap.set("n", "<leader>rjt", "<cmd>require('java').test.run_current_class()<CR>", { desc = "Run Java Test" })
+vim.keymap.set("n", "<leader>djt", "<cmd>require('java').test.debug_current_class()<CR>", { desc = "Debug Java Test" })
