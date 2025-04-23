@@ -7,3 +7,5 @@ vim.filetype.add({
     metal = "metal",
   },
 })
+
+vim.opt.signcolumn = "no"

@@ -8,7 +8,7 @@ return {
 
     -- optional
     "nvim-treesitter/nvim-treesitter",
-    "rcarriga/nvim-notify",
+    "j-hui/fidget.nvim",
     "nvim-tree/nvim-web-devicons",
   },
   opts = {
